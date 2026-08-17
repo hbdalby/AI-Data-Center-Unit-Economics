@@ -3,7 +3,7 @@
 
 A bottoms-up unit-economics model of a 100 MW AI data center, built to answer one question: **how does national energy security affect the viability of a data center project?**
 
-The model runs a single-hold liquidation DCF (build, operate 5 years, liquidate) across five countries chosen to span energy endowment, grid access, and cost of capital. It identifies time-to-power — not energy cost — as the binding constraint on project viability.
+The model runs a single-hold liquidation DCF (build, operate 5 years, liquidate) across five countries chosen to span energy endowment, grid access, and cost of capital. It identifies time-to-power, not energy price, as the binding constraint on project viability.
 
 ## Key Findings
 
@@ -23,7 +23,7 @@ The model is a per-period unlevered discounted cash flow. Revenue is GPU compute
 
 **Compute-price erosion:** the model applies a calendar-coupled price path. Entry price = P0 × (1 − decline)^TTP, where P0 is today's rental rate, decline is a scenario-linked annual rate (base −20%), and TTP is time-to-power. Contracted deals lock the entry price; merchant deals continue eroding to a floor ($2.40, the estimated full break-even for a low-cost producer). This means a slow build enters an already-eroded market — the queue costs you the market, not just time.
 
-**Architecture:** the model follows River/FAST financial modeling standards — one-directional flow, blue inputs / black calcs / red outputs, sheet protection with only assumption cells unlocked, and structural divider tabs.
+**Architecture:** the model follows PwC financial modeling standards — one-directional flow, blue inputs / black calcs / red outputs, sheet protection with only assumption cells unlocked, and structural divider tabs.
 
 ## Model Structure (31 tabs)
 
