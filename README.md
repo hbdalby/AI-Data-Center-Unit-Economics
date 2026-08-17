@@ -138,7 +138,7 @@ All assumptions are sourced. The Sources tab lists 25+ inputs with named source,
 
 ## Built With
 
-- River / FAST financial modeling standards (Amaury de Closset methodology)
+- FAST financial modeling standards
 - PwC Global Financial Modelling Guidelines
 - Excel with sheet protection, defined names, and structured references
 - Python (openpyxl) for the build engine — the workbook is programmatically generated to ensure structural integrity
