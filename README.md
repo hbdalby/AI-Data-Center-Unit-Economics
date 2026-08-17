@@ -1,7 +1,7 @@
 [README_2.md](https://github.com/user-attachments/files/31157132/README_2.md)
 # AI Data Center Unit Economics — Five-Country Model
 
-A bottoms-up unit-economics model of a 100 MW AI data center, built to answer one question: **how does national energy security affect the viability of a data center project?**
+A bottoms-up unit-economics model of a 100 MW AI data center, built to answer a question: **how does national energy security affect the viability of a data center project?**
 
 The model runs a single-hold liquidation DCF (build, operate 5 years, liquidate) across five countries, each representing a distinct energy security archetype: Norway (concentrated hydro), Saudi Arabia (abundant hydrocarbon), India (cheap power, high cost of capital), the United States (resilient grid, long queues), and Ireland (moratorium-constrained supply).
 
