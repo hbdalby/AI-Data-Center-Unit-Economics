@@ -1,4 +1,4 @@
-[README_1.md](https://github.com/user-attachments/files/31157003/README_1.md)
+[README_2.md](https://github.com/user-attachments/files/31157132/README_2.md)
 # AI Data Center Unit Economics — Five-Country Model
 
 A bottoms-up unit-economics model of a 100 MW AI data center, built to answer one question: **how does national energy security affect the viability of a data center project?**
@@ -12,11 +12,11 @@ The model runs a single-hold liquidation DCF (build, operate 5 years, liquidate)
 There is no unconditional winner. Economics, energy security, and carbon emissions each indicate a different leader:
 
 - **Time-to-power is the binding constraint.** Each year in the interconnection queue accrues holding cost and exposes the project to compute-price erosion. Countries with long grid queues (US 4.5 years, Ireland 6 years) enter the market at a collapsed GPU rental price and go negative even with contracted offtake.
-- **Offtake contracts are necessary but not sufficient.** Contracts lift NPV by raising occupancy, lowering WACC, and locking the entry price against erosion. But they cannot rescue a site that waits too long for power.
+- **Offtake contracts are necessary but not sufficient.** Contracts lift NPV $0.67–$2.16 billion per site by raising occupancy, lowering WACC, and locking the entry price against erosion. But they cannot rescue a site that waits too long for power.
 - **Energy cost is immaterial at today's prices.** Power is ~3% of revenue for fast-queue countries. It crosses to material only where a long queue erodes compute price to the floor *and* local power is expensive (Ireland).
 - **The trade-offs are real.** Saudi Arabia is strong on economics and security but produces the highest carbon emissions. Norway wins on economics and carbon but concentrates 88% of generation in hydro, exposing drought risk. The US has the most energy-secure grid but long queues push base-scenario NPV negative.
 
-The NPV ranking is invariant to compute-price scenario — the ordering holds across bear, base, and bull.
+The top-two/bottom-two grouping is the most stable output across scenarios, but the ranking is not scenario-invariant. In bull, Saudi Arabia overtakes Norway and all five countries are profitable. In bear, the ranking inverts toward least-bad survivors. NPV rankings are scenario-conditional; absolute NPV swings 5–8x across scenarios.
 
 ## Methodology
 
@@ -101,8 +101,9 @@ One-way tornado (base/contracted/Norway, ranked by NPV swing in $m):
 | Compute price (P0) | 78 | 4,108 | 4,030 |
 | Price decline rate | 371 | 2,040 | 1,669 |
 | GPU density | 959 | 1,448 | 489 |
+| GPU + IT capex | 1,132 | 1,448 | 316 |
 
-Compute price dominates. The price-decline lever (how fast the market erodes) is the #2 mover — a structural finding from the erosion mechanic. Energy cost ranks near the bottom, confirming the thesis that power is a time problem, not a cost problem.
+NPV is most sensitive to three levers: compute price (for countries above the floor), GPU density, and GPU chip price — consistent with the finding that IT represents ~80% of capex. Supplied power is low materiality: power is <5% of revenue for fast-queue winners, rising to ~12% only where the queue erodes compute price to the floor.
 
 ## Limitations
 
@@ -110,7 +111,7 @@ Compute price dominates. The price-decline lever (how fast the market erodes) is
 - **Country-invariant compute price.** Revenue is applied identically across countries — no data-residency, sovereignty, or latency-driven price premia. Defensible (compute is globally traded) but stated explicitly.
 - **USD-nominal, no FX.** All figures are in USD with no local-currency inflation or hedging cost modeled.
 - **Unconditional chip access.** The model assumes GPU availability. Trade restrictions (export controls, tariffs) are bracketed, not priced.
-- **Simplified tax.** Statutory corporate rate, unlevered, with NOL carryforward but no jurisdiction-specific incentives.
+- **Simplified tax.** Statutory corporate rate, unlevered, no loss carryforward, no jurisdiction-specific incentives.
 - **No water valuation.** Water availability is a live constraint in Saudi Arabia and rising in India but is not costed.
 
 ## How to Use
