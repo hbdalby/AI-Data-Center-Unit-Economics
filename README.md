@@ -150,6 +150,3 @@ All assumptions are sourced. The Sources tab lists 25+ inputs with named source,
 
 **Henry Dalby** — [LinkedIn](https://www.linkedin.com/in/henrydalby/)
 
-## License
-
-This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
